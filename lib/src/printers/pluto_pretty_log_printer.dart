@@ -224,16 +224,17 @@ class PlutoPrettyLogPrinter extends PlutoLogPrinter {
   }
 
   bool _discardDeviceStacktraceLine(String file) {
-    return file.startsWith('package:nuntio_pluto');
+    return file.startsWith('package:infobits_pluto');
   }
 
   bool _discardWebStacktraceLine(String file) {
-    return file.startsWith('packages/nuntio_pluto') ||
+    return file.startsWith('packages/infobits_pluto') ||
         file.startsWith('dart-sdk/lib');
   }
 
   bool _discardBrowserStacktraceLine(String file) {
-    return file.startsWith('package:nuntio_pluto') || file.startsWith('dart:');
+    return file.startsWith('package:infobits_pluto') ||
+        file.startsWith('dart:');
   }
 
   String getTime() {
